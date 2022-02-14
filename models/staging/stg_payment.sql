@@ -7,8 +7,8 @@ with payments as(
       ,status
       ,amount/100 as amount
       ,created as created_at
-  from open_test.public_test.payment
+  from open_test.raw_data.payment
   
 )
 
-select * from payments;
+select * from payments

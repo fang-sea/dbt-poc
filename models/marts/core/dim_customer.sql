@@ -18,7 +18,7 @@ customer_orders as (
         ,count(order_id) as number_of_orders
         ,sum(amount) as lifetime_value
 
-    from fact_order
+    from open_test.ws_fz.fact_order
     group by 1
 ),
 

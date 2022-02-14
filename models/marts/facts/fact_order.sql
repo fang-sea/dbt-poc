@@ -8,9 +8,9 @@ payments as (
 
 order_payments as (
     select
-        order_id
+        id as order_id
         ,sum(case when status = 'success' then amount end) as amount
-    from payments
+    from open_test.raw_data.payment
     group by 1
 ),
 

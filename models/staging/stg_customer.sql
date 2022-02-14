@@ -4,7 +4,7 @@ with customers as (
         id as customer_id
         ,first_name
         ,last_name
-    from open_test.public_test.customers
+    from open_test.raw_data.customers
 
 )
 

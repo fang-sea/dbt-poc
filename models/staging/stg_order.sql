@@ -6,7 +6,7 @@ with orders as (
         ,order_date
         ,status
     
-    from open_test.public_test.orders
+    from open_test.raw_data.orders
 )
 
 select * from orders
