@@ -9,6 +9,11 @@ orders as (
     select * from {{ ref('stg_order')}}
 ),
 
+fact_order as (
+
+    select * from {{ref('fact_order')}}
+),
+
 customer_orders as (
 
     select 
@@ -18,7 +23,7 @@ customer_orders as (
         ,count(order_id) as number_of_orders
         ,sum(amount) as lifetime_value
 
-    from open_test.ws_fz.fact_order
+    from fact_order
     group by 1
 ),
 
