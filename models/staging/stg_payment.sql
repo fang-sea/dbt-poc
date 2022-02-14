@@ -7,7 +7,7 @@ with payments as(
       ,status
       ,amount/100 as amount
       ,created as created_at
-  from open_test.raw_data.payment
+  from {{source('poc_raw_data','payment')}}
   
 )
 

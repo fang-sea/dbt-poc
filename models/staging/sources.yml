@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+    - name: poc_raw_data
+      database: open_test
+      schema: raw_data
+      loader: dms
+      loaded_at_field: _loaded_at
+      tables:
+        - name: orders
+        - name: customers
+        - name: payment
+     

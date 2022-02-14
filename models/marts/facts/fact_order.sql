@@ -10,7 +10,7 @@ order_payments as (
     select
         id as order_id
         ,sum(case when status = 'success' then amount end) as amount
-    from open_test.raw_data.payment
+    from {{source('poc_raw_data','payment')}}
     group by 1
 ),
 
